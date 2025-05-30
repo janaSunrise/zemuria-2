@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  chat-backend:
+    build: .
+    ports:
+      - "8000:8000"  # FastAPI backend
+      - "7860:7860"  # Langflow UI
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - langflow_data:/app/langflow_data
+    restart: unless-stopped
+
+volumes:
+  langflow_data:

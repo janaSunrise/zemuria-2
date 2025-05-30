@@ -1,0 +1,12 @@
+[project]
+name = "chat-backend"
+version = "0.1.0"
+description = "FastAPI backend integrated with Langflow for AI-powered chat"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi[standard]>=0.115.12",
+    "langflow>=1.4.2",
+    "httpx>=0.25.0",
+    "pydantic>=2.0.0",
+]
